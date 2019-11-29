@@ -34,5 +34,6 @@ alias suvim='sudo -E vim'
 alias ls='ls --color=auto'
 alias ls-la='ls -la'
 alias lsla='ls -la'
+alias lsls='ls -la | less'
 
 alias takeover='tmux detach -a'
