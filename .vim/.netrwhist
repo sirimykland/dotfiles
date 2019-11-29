@@ -1,6 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =4
-let g:netrw_dirhist_1='/var/log'
-let g:netrw_dirhist_2='/home/cassarossa/itk/sirmy/dev/mdb2/templates'
-let g:netrw_dirhist_3='/home/cassarossa/itk/sirmy/dev/mdb2/templates/account'
-let g:netrw_dirhist_4='/home/cassarossa/uka/theodorc/dotfilesAgain/.dotfiles'

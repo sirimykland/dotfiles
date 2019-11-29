@@ -1,5 +1,6 @@
 # Bash aliases, kept alfabetically
-alias brc='source /home/cassarossa/itk/sirmy/.bashrc'
+#alias brc='source /home/cassarossa/itk/sirmy/.bashrc'
+alias brc='source ~/.bashrc'
 
 alias cd..='cd ..'
 alias ..='cd ..'
