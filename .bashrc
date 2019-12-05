@@ -73,7 +73,7 @@ function parse_git_dirty {
 			fi
 	}
 
-export PS1="\[$LIGHT_GREEN\]\u\[\e[m\]\[$YELLOW\]@\[\e[m\]\[$GREEN\]\h\[\e[m\]:\[$GRREN\]\w\[\e[m\]\[$GREEN\]\\$\[\e[m\]\[$LIGHT_BLUE\]\`parse_git_branch\`\[\e[m\] "
+export PS1="\[$LIGHT_GREEN\]\u\[\e[m\]\[$YELLOW\]@\[\e[m\]\[$LIGHT_PURPLE\]\h\[\e[m\]:\[$CYAN\]\w\[\e[m\]\[$GREEN\]\\$\[\e[m\]\[$LIGHT_BLUE\]\`parse_git_branch\`\[\e[m\] "
 
 # host@username:~$ 
 #export PS1="$LIGHT_GREEN\u$YELLOW@$GREEN\h:\W\$ $NC"
