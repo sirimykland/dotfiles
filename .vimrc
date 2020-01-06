@@ -1,5 +1,10 @@
-" vim-bootstrap 
+"custom vim option"
+noremap <Up> <Nop>
+noremap <Down> <Nop>
+noremap <Left> <Nop>
+noremap <Right> <Nop>
 
+" vim-bootstrap 
 "*****************************************************************************
 "" Vim-PLug core
 "*****************************************************************************
