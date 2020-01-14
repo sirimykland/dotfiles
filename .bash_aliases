@@ -27,6 +27,8 @@ export GREP_COLOR="1;32"
 alias grep='grep --color=auto'
 alias gerp='grep'
 
+alias has='grep -iRl'
+
 alias sugit='sudo -E git'
 alias suvim='sudo -E vim'
 
