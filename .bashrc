@@ -1,6 +1,8 @@
 alias cass='mosh sirmy@cassarossa.samfundet.no'
+alias casss='ssh sirmy@cassarossa.samfundet.no'
 alias cirk='ssh cirkus.samfundet.no'
 alias ntnu='mosh login.stud.ntnu.no'
+alias ntnus'ssh login.stud.ntnu.no'
 
 # if bash_alias get it
 if [ -f ~/.bash_aliases ]; then
