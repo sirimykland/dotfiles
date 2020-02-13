@@ -5,6 +5,7 @@ Git repo for my dotfiles, for distribution to all my Linux devices.
 ## How to get this up and running
 
 > git clone https://github.com/sirimykland/dotfiles.git
+
 > cd dotfiles/
 
 
