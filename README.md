@@ -8,11 +8,16 @@ git clone url-to-repo
 
 cd dotfiles/
 
-./makesymlinks.sh 
 
-## Add new files
+## Symlink files
 
-mv .filename dotfiles/
+all files:
+./makesymlinks.sh  
 
+or single file
 ln -s .filename dotfiles/.filename
 
+## Local config/aliases
+
+create a .bash_local for local configurations or aliases
+the file is listed in .gitignore
