@@ -1,0 +1,4 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =2
+let g:netrw_dirhist_1='/home/cassarossa/itk/felles/spamklassifisering/itk/itk-02-kolden'
+let g:netrw_dirhist_2='/home/cassarossa/itk/sirmy/.vim'
