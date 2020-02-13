@@ -1,1 +1,1 @@
-/home/cassarossa/itk/sirmy/dotfiles/.vim
+/home/sirmy/dotfiles/.vim
