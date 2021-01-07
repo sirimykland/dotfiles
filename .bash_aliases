@@ -29,6 +29,8 @@ alias gerp='grep'
 
 alias has='grep -iRl'
 
+alias p8='ping 8.8.8.8'
+
 alias sugit='sudo -E git'
 alias suvim='sudo -E vim'
 
