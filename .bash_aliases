@@ -23,6 +23,9 @@ alias cls='clear'
 
 alias diff='diff --color=auto'
 
+alias chekout='checkout'
+
+
 export GREP_COLOR="1;32"
 alias grep='grep --color=auto'
 alias gerp='grep'
