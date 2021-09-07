@@ -2,6 +2,8 @@
 
 Git repo for my dotfiles, for distribution to all my Linux devices.
 
+zsh comming soon.
+
 ## How to get this up and running
 
 ```
