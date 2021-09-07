@@ -1,6 +1,6 @@
 # Dotfiles
 
-Git repo for my dotfiles, for distribution to all my Linux devices.
+Git repo for my dotfiles, easy setup on new devices.
 
 zsh coming soon.
 
