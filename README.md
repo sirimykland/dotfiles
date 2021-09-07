@@ -2,7 +2,7 @@
 
 Git repo for my dotfiles, for distribution to all my Linux devices.
 
-zsh comming soon.
+zsh coming soon.
 
 ## How to get this up and running
 
