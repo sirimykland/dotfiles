@@ -1,6 +1,5 @@
-# Bash aliases, kept alfabetically
-#alias brc='source /home/cassarossa/itk/sirmy/.bashrc'
-alias brc='source ~/.bashrc'
+# Zsh aliases, kept alfabetically
+alias zrc='source ~/.zshrc'
 
 alias cd..='cd ..'
 alias ..='cd ..'
@@ -9,7 +8,7 @@ alias ....='cd ../../..'
 alias .....='cd ../../../..'
 
 # perform 'ls' after 'cd' if successful.
-cdls() {
+function  cdls() {
   builtin cd "$*"
   RESULT=$?
   if [ "$RESULT" -eq 0 ]; then
@@ -20,10 +19,9 @@ alias cdls='cdls'
 
 # Clear the terminal
 alias cls='clear'
+alias chekout='checkout'
 
 alias diff='diff --color=auto'
-
-alias chekout='checkout'
 
 
 export GREP_COLOR="1;32"
@@ -32,7 +30,17 @@ alias gerp='grep'
 
 alias has='grep -iRl'
 
+function jdk() {
+    version=$1
+    export JAVA_HOME=$(/usr/libexec/java_home -v$version)
+    java -version
+}
+
+function man() {
+  command man $1 || $_ --help
+}
 alias p8='ping 8.8.8.8'
+
 
 alias sugit='sudo -E git'
 alias suvim='sudo -E vim'
