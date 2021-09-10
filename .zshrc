@@ -16,22 +16,13 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-
-export AURORA_DIR="$HOME/.config/aurora"
-[[ -d "$AURORA_DIR" ]] || mkdir -p $AURORA_DIR
-export SKE_ROOT_CA="$AURORA_DIR/SKEROOTCA.pem"
-[[ -s "$SKE_ROOT_CA" ]] || security find-certificate -c SKEROOTCA -p > $SKE_ROOT_CA
-
-chmod 755 $SKE_ROOT_CA
+source $HOME/.zsh_local
 
 [[ -d "$HOME/bin" ]] || mkdir -p $HOME/bin
 export PATH=$PATH:/usr/local/bin:$HOME/bin
 export NODE_EXTRA_CA_CERTS=$SKE_ROOT_CA
 export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
 
-man(){
-    command man $1 || $_ --help
-}
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -69,5 +60,4 @@ alias zshconfig="vim ~/.zshrc"
 autoload -U compinit; compinit -u
 
 source $HOME/.zsh_aliases
-source $HOME/.zsh_local
 
