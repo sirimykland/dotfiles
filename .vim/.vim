@@ -1,1 +1,1 @@
-/home/sirmy/dotfiles/.vim
+/Users/k32973/.dotfiles/.vim
