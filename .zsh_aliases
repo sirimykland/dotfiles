@@ -28,6 +28,8 @@ export GREP_COLOR="1;32"
 alias grep='grep --color=auto'
 alias gerp='grep'
 
+alias gitup='git push --set-upstream origin $(current_branch)'
+
 alias has='grep -iRl'
 
 function jdk() {
