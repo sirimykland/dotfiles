@@ -18,11 +18,6 @@ export NVM_DIR="$HOME/.nvm"
 
 source $HOME/.zsh_local
 
-[[ -d "$HOME/bin" ]] || mkdir -p $HOME/bin
-export PATH=$PATH:/usr/local/bin:$HOME/bin
-export NODE_EXTRA_CA_CERTS=$SKE_ROOT_CA
-export HOMEBREW_CASK_OPTS="--appdir=~/Applications"
-
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
