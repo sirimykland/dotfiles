@@ -47,8 +47,7 @@ HIST_STAMPS="dd.mm.yyyy"
 plugins=(
     git 
     docker 
-    zsh-syntax-highlighting 
-    zsh-autosuggestions)
+)
 
 source $ZSH/oh-my-zsh.sh
 

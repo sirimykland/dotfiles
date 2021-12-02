@@ -43,6 +43,7 @@ function man() {
 }
 alias p8='ping 8.8.8.8'
 
+alias rmnm='find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +'
 
 alias sugit='sudo -E git'
 alias suvim='sudo -E vim'
