@@ -2,7 +2,7 @@
 
 if [[ $* = "help" ]]; then
     echo "To use this script:
-        ./makesymlinks [zsh|bash|other]"
+        ./makesymlinks [zsh|bash|tmux|git|other]"
 
 elif [[ $* =~ "zsh" ]]; then
     echo Symlinking zsh...
@@ -22,10 +22,16 @@ elif [[ $* =~ "bash" ]]; then
     git update-index --skip-worktree .bash_local;
 elif [[ $* =~ "tmux" ]]; then
     echo Symlinking tmux config...
-        ln -sfv ~/.dotfiles/.tmux.conf ~/.tmux.conf ; 
+    ln -sfv ~/.dotfiles/.tmux.conf ~/.tmux.conf ; 
+elif [[ $1 =~ "git" ]]; then
+    echo Symlinking other files...
+    for FILE in .gitconfig .git-completion.bash; 
+    do 
+        ln -sfv ~/.dotfiles/$FILE ~/$FILE; 
+    done
 elif [[ $1 =~ "other" ]]; then
     echo Symlinking other files...
-    for FILE in .vimrc .vim .git-completion.bash; 
+    for FILE in .vimrc .vim; 
     do 
         ln -sfv ~/.dotfiles/$FILE ~/$FILE; 
     done
