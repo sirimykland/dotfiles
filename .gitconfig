@@ -5,3 +5,13 @@
 	co = checkout
 	checout = checkout
 	chekout = checkout
+	st = status -sb
+	ll = log --oneline
+	last = log -1 HEAD --stat
+	cm = commit -m
+	rv = remote -v
+	d = diff
+	dv = difftool -t vimdiff -y
+	gl = config --global -l
+[help]
+	autocorrect = 20
