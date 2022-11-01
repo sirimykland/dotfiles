@@ -6,7 +6,7 @@ if [[ $* = "help" ]]; then
 
 elif [[ $* =~ "zsh" ]]; then
     echo Symlinking zsh...
-    for FILE in .zshrc .zsh_aliases; 
+    for FILE in .zshrc .zsh_aliases .git-completion.zsh; 
     do 
         ln -sfv ~/.dotfiles/$FILE ~/$FILE; 
     done
@@ -14,7 +14,7 @@ elif [[ $* =~ "zsh" ]]; then
     git update-index --skip-worktree .zsh_local;
 elif [[ $* =~ "bash" ]]; then
     echo Symlinking bash...
-    for FILE in .bashrc .bash_aliases; 
+    for FILE in .bashrc .bash_aliases .git-completion.bash; 
     do 
         ln -sfv ~/.dotfiles/$FILE ~/$FILE ; 
     done
@@ -25,7 +25,7 @@ elif [[ $* =~ "tmux" ]]; then
     ln -sfv ~/.dotfiles/.tmux.conf ~/.tmux.conf ; 
 elif [[ $1 =~ "git" ]]; then
     echo Symlinking other files...
-    for FILE in .gitconfig .git-completion.bash; 
+    for FILE in .gitconfig; 
     do 
         ln -sfv ~/.dotfiles/$FILE ~/$FILE; 
     done
