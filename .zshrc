@@ -1,6 +1,3 @@
-# If you come from bash you might have to change your $PATH.
-# export PATH=$HOME/bin:/usr/local/bin:$PATH
-
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/$USER/.oh-my-zsh"
 
@@ -12,15 +9,10 @@ ZSH_THEME="fletcherm"
 
 
 export ZSH_DISABLE_COMPFIX=true
-export NVM_DIR="$HOME/.nvm"
-[ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "/usr/local/opt/nvm/etc/bash_completion.d/nvm" ] && . "/usr/local/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
-export PATH="$HOME/.jenv/bin:$PATH"
-eval "$(jenv init -)"
-
-source $HOME/.zsh_local
-
+. ~/.zsh_aliases
+. ~/.zsh_local
+. ~/.profile
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -49,16 +41,14 @@ plugins=(
     docker 
 )
 
-source $ZSH/oh-my-zsh.sh
+. $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
 
 
 # aliases and alias file
-alias zshconfig="vim ~/.zshrc"
+alias zshconfig="vim $HOME/.zshrc"
 
 autoload -U compinit; compinit -u
-
-source $HOME/.zsh_aliases
 
