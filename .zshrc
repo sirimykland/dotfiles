@@ -11,7 +11,7 @@ ZSH_THEME="fletcherm"
 export ZSH_DISABLE_COMPFIX=true
 
 . ~/.zsh_aliases
-. ~/.zsh_local
+[ -f ~/.zsh_local ] && . ~/.zsh_local
 . ~/.profile
 
 # Uncomment the following line to enable command auto-correction.

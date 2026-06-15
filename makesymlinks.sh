@@ -12,8 +12,13 @@ elif [[ $* =~ "zsh" ]]; then
         ln -sfv ~/dotfiles/$FILE ~/$FILE; 
     done
     
-    ln -sv ~/dotfiles/.zsh_local ~/.zsh_local; 
-    git update-index --skip-worktree .zsh_local;
+    # ~/.zsh_local is a real, untracked file for local config/secrets.
+    # Seed it from the template only if it doesn't already exist.
+    if [ ! -f ~/.zsh_local ]; then
+        cp -v ~/dotfiles/.zsh_local.template ~/.zsh_local
+    else
+        echo "~/.zsh_local already exists, leaving it untouched"
+    fi
 
 elif [[ $* =~ "tmux" ]]; then
     echo Symlinking tmux config...

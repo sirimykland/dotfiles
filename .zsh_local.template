@@ -1,0 +1,10 @@
+# Put your local configurations here -- this file should NEVER be pushed.
+#
+# makesymlinks.sh copies this template to ~/.zsh_local on first setup.
+# ~/.zsh_local is git-ignored, so secrets and machine-specific config stay local.
+
+# Example: set environment variables here
+# export SOME_AUTH_TOKEN='...'
+
+# Example: local aliases and functions
+# alias myalias='...'
