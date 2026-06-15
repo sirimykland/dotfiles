@@ -32,7 +32,7 @@ if [[ $* = "help" ]]; then
 elif [[ $* =~ "zsh" ]]; then
     echo Symlinking zsh...
 
-    for FILE in .zshrc .zsh_aliases; do
+    for FILE in .zshrc .zsh_omz .zsh_aliases; do
         link_file "$FILE"
     done
 
