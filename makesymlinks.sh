@@ -6,6 +6,21 @@ set -e
 # it is run from or what the repo is cloned as (~/dotfiles, ~/.dotfiles, ...).
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
+# Download git completion scripts from the official Git repository.
+download_git_completion() {
+    local url_base="https://raw.githubusercontent.com/git/git/master/contrib/completion"
+    local file="git-completion.zsh"
+    local dest="$DOTFILES_DIR/$file"
+
+    echo "Downloading $file from git/git repo..."
+    if curl -fsSL -o "$dest" "$url_base/$file"; then
+        echo "✓ Downloaded $dest"
+    else
+        echo "✗ Failed to download $file" >&2
+        return 1
+    fi
+}
+
 # Symlink a repo file into $HOME, backing up any existing file/symlink first.
 link_file() {
     local src="$DOTFILES_DIR/$1"
@@ -27,10 +42,15 @@ link_file() {
 
 if [[ $* = "help" ]]; then
     echo "To use this script:
-        ./makesymlinks.sh [zsh|tmux]"
+        ./makesymlinks.sh [zsh|tmux|git]"
 
 elif [[ $* =~ "zsh" ]]; then
     echo Symlinking zsh...
+
+    # Download git completion if it doesn't exist
+    if [ ! -f "$DOTFILES_DIR/git-completion.zsh" ]; then
+        download_git_completion
+    fi
 
     for FILE in .zshrc .zsh_aliases .git-completion.zsh; do
         link_file "$FILE"
@@ -48,7 +68,11 @@ elif [[ $* =~ "tmux" ]]; then
     echo Symlinking tmux config...
     link_file ".tmux.conf"
 
+elif [[ $* =~ "git" ]]; then
+    echo Updating git completion scripts...
+    download_git_completion
+
 else
     echo "To use this script:
-        ./makesymlinks.sh [zsh|tmux]"
+        ./makesymlinks.sh [zsh|tmux|git]"
 fi
