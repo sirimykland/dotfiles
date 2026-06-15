@@ -9,7 +9,6 @@ git clone https://github.com/sirimykland/dotfiles.git ~/dotfiles
 cd ~/dotfiles
 ```
 
-
 ## Symlink files
 
 The script symlinks config into `$HOME`, backing up any existing files first.

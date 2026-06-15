@@ -12,6 +12,7 @@ export ZSH_DISABLE_COMPFIX=true
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
+CORRECT_IGNORE_FIRST=1
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # Caution: this setting can cause issues with multiline prompts (zsh 5.7.1 and newer seem to work)
@@ -33,13 +34,13 @@ HIST_STAMPS="dd.mm.yyyy"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git 
     docker 
+    mvn
+    brew
+    asdf
+    gitfast
+    npm
 )
-
-# Add ~/.zsh/completions to fpath for custom completion scripts.
-# This should be done before sourcing oh-my-zsh.sh.
-fpath=(~/.zsh/completions $fpath)
 
 . $ZSH/oh-my-zsh.sh
 
@@ -51,8 +52,4 @@ fpath=(~/.zsh/completions $fpath)
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
-
-
-# aliases and alias file
-alias zshconfig="vim $HOME/.zshrc"
 
