@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/$USER/.oh-my-zsh"
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -41,7 +41,7 @@ plugins=(
 
 # Source custom aliases and local config after oh-my-zsh so they take
 # precedence over anything oh-my-zsh defines.
-. ~/.zsh_aliases
+[ -f ~/.zsh_aliases ] && . ~/.zsh_aliases
 [ -f ~/.zsh_local ] && . ~/.zsh_local
 [ -f ~/.profile ] && . ~/.profile
 
@@ -51,6 +51,4 @@ plugins=(
 
 # aliases and alias file
 alias zshconfig="vim $HOME/.zshrc"
-
-autoload -U compinit; compinit -u
 
