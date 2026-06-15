@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 
 if [[ $* = "help" ]]; then
     echo "To use this script:
