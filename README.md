@@ -16,19 +16,19 @@ The script symlinks config into `$HOME`, backing up any existing files first.
 It works regardless of where the repo is cloned.
 
 ```
-# zsh config (downloads git completion on first run, seeds ~/.zsh_local from template)
+# zsh config (seeds ~/.zsh_local from template)
 ./makesymlinks.sh zsh
 
 # tmux config
 ./makesymlinks.sh tmux
 
-# Update git completion scripts from the official git repository
+# Download git completion to ~/.zsh/completions/
 ./makesymlinks.sh git
 ```
 
 Requires [oh-my-zsh](https://ohmyz.sh/) for the zsh setup.
 
-**Note:** Git completion scripts are downloaded from the [official Git repository](https://github.com/git/git/tree/master/contrib/completion) on first setup and can be updated anytime with `./makesymlinks.sh git`.
+**Note:** Git completion is downloaded from the [official Git repository](https://github.com/git/git/tree/master/contrib/completion) to `~/.zsh/completions/` and loaded via zsh's `fpath`. Run `./makesymlinks.sh git` anytime to update.
 
 ## Local config/aliases
 

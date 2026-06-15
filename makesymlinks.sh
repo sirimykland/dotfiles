@@ -6,12 +6,13 @@ set -e
 # it is run from or what the repo is cloned as (~/dotfiles, ~/.dotfiles, ...).
 DOTFILES_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
-# Download git completion scripts from the official Git repository.
+# Download git completion script to ~/.zsh/completions/
 download_git_completion() {
     local url_base="https://raw.githubusercontent.com/git/git/master/contrib/completion"
     local file="git-completion.zsh"
-    local dest="$DOTFILES_DIR/$file"
+    local dest="$HOME/.zsh/completions/$file"
 
+    mkdir -p "$HOME/.zsh/completions"
     echo "Downloading $file from git/git repo..."
     if curl -fsSL -o "$dest" "$url_base/$file"; then
         echo "✓ Downloaded $dest"
@@ -47,12 +48,7 @@ if [[ $* = "help" ]]; then
 elif [[ $* =~ "zsh" ]]; then
     echo Symlinking zsh...
 
-    # Download git completion if it doesn't exist
-    if [ ! -f "$DOTFILES_DIR/git-completion.zsh" ]; then
-        download_git_completion
-    fi
-
-    for FILE in .zshrc .zsh_aliases .git-completion.zsh; do
+    for FILE in .zshrc .zsh_aliases; do
         link_file "$FILE"
     done
 
@@ -69,7 +65,7 @@ elif [[ $* =~ "tmux" ]]; then
     link_file ".tmux.conf"
 
 elif [[ $* =~ "git" ]]; then
-    echo Updating git completion scripts...
+    echo Downloading git completion scripts...
     download_git_completion
 
 else

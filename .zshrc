@@ -37,6 +37,10 @@ plugins=(
     docker 
 )
 
+# Add ~/.zsh/completions to fpath for custom completion scripts.
+# This should be done before sourcing oh-my-zsh.sh.
+fpath=(~/.zsh/completions $fpath)
+
 . $ZSH/oh-my-zsh.sh
 
 # Source custom aliases and local config after oh-my-zsh so they take
