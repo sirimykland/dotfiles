@@ -2,8 +2,6 @@
 
 Git repo for my dotfiles, easy setup on new devices.
 
-zsh coming soon.
-
 ## How to get this up and running
 
 ```
@@ -22,5 +20,5 @@ ln -s .filename dotfiles/.filename
 ```
 ## Local config/aliases
 
-use `.bash_local` for local configurations or aliases
+use `.zsh_local` for local configurations or aliases
 the file is listed in `.gitignore`
