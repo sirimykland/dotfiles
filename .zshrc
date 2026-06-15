@@ -10,10 +10,6 @@ ZSH_THEME="fletcherm"
 
 export ZSH_DISABLE_COMPFIX=true
 
-. ~/.zsh_aliases
-[ -f ~/.zsh_local ] && . ~/.zsh_local
-. ~/.profile
-
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
 
@@ -42,6 +38,12 @@ plugins=(
 )
 
 . $ZSH/oh-my-zsh.sh
+
+# Source custom aliases and local config after oh-my-zsh so they take
+# precedence over anything oh-my-zsh defines.
+. ~/.zsh_aliases
+[ -f ~/.zsh_local ] && . ~/.zsh_local
+[ -f ~/.profile ] && . ~/.profile
 
 # You may need to manually set your language environment
 # export LANG=en_US.UTF-8
